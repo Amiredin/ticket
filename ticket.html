@@ -1,0 +1,65 @@
+<html>
+<head>
+<script>
+
+    
+    
+        // Retrieving the text input's value which was stored into localStorage
+        var fname = localStorage.getItem("firstname");
+        var lname = localStorage.getItem("lastname");
+        var email = localStorage.getItem("email");
+        var ename = localStorage.getItem("eventname");
+        var date = localStorage.getItem("startdate");
+        var venue = localStorage.getItem("venue");
+        var address = localStorage.getItem("address");
+        var country= localStorage.getItem("country");
+
+        // Writing the value in the document
+           // Storing the value above into localStorage
+        document.write(""+fname);
+        document.write(""+lname);
+        document.write("<br>"+email);
+        document.write("<br>");
+        document.write("<br>"+ename);
+        document.write("<br>"+date);
+        document.write("<br>"+venue);
+        document.write("<br>"+address);
+        document.write("<br>"+country);
+     // Called on form's `onsubmit`
+     function tosubmit() {
+            // Getting the value of your text input
+            var Ticket = document.getElementById("ticket").value;
+            var Quantity = document.getElementById("quantity").value;
+            var Price = document.getElementById("price").value;
+
+
+            // Storing the value above into localStorage
+            localStorage.setItem("ticket", Ticket);
+            localStorage.setItem("quantity", Quantity);
+            localStorage.setItem("price", Price);
+
+            return ;
+        }
+
+</script>
+</head>    
+
+<body >
+    <form name="myform" onsubmit="tosubmit();" action="index.html">
+    <h1> Create Ticket</h1>
+    <p> 
+        <label for="ticket">Ticket Name</label>
+        <input  id="ticket" type="text" name="data"><br>
+    </p>
+
+    <p>Quantity: <input id ="quantity"type="number" ng-model="quantity"><br></p>
+    
+    <p>  Price: <input id ="price" type="number" ng-model="price"><br></p>
+    <input type="submit" value="Submit">
+
+</form>
+    
+    
+</body>
+
+</html>

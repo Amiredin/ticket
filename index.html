@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <script>
+        // Retrieving the text input's value which was stored into localStorage
+        var ename = localStorage.getItem("eventname");
+        var date = localStorage.getItem("startdate");
+        var venue = localStorage.getItem("venue");
+        var address = localStorage.getItem("address");
+        var country= localStorage.getItem("country");
+        var Ticket= localStorage.getItem("ticket");
+        var Quantity= localStorage.getItem("quantity");
+        var Price= localStorage.getItem("price");
+        
+        
+
+        // Writing the value in the document
+           // Storing the value above into localStorage
+        document.write("<br>");
+        document.write("<br>"+ename);
+        document.write("<br>"+date);
+        document.write("<br> Venue "+venue);
+        document.write("<br> Address "+address);
+        document.write("<br>  "+country);
+        document.write("<br> "+Ticket);
+        document.write("<br> Quantity available "+Quantity);
+        document.write("<br>Price of "+Price);
+        document.write("<br>");
+
+
+    </script>
+
+<body>
+        <form name="myform" onsubmit="tosubmit();" action="buy.html">
+            <p>
+                   
+            </p>
+                <input style="text-align:end;" type="submit" value="Buy Ticket"><br>
+         </form>       
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+
+    // Called on form's `onsubmit`
+    function tosubmit() {
+        // Getting the value of your text input
+        var firstname = document.getElementById("fname").value;
+        var lastname = document.getElementById("lname").value;
+        var Email = document.getElementById("Email").value;
+
+        // Storing the value above into localStorage
+        localStorage.setItem("fname", firstname);
+        localStorage.setItem("lname", lastname);
+        localStorage.setItem("Email", Email);
+
+        return ;
+    }
+
+</script> 
+<body>
+        <h1>Buy Ticket</h1> 
+        <form name="myform" onsubmit="tosubmit();" action="customerticket.html">
+            <p> 
+               <label for="firstname">First Name</label>
+               <input  id="fname" type="text" name="data"><br>
+            </p>
+            <p> 
+                <label for="lasttname">Last Name</label>
+                <input  id="lname" type="text" name="data"><br>
+            </p>
+            <p> 
+                <label for="email">Email</label>
+                <input  id="Email" type=email name="data"><br>
+            </p>
+                         
+            <!-- <input  id="mytext" type="text" name="data">
+            <input  id="mytext" type="text" name="data"> -->
+
+            <input type="submit" value="Buy Ticket">
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<head>
+        <script>
+
+                
+         // Retrieving the text input's value which was stored into localStorage
+            var fname = localStorage.getItem("firstname");
+            var lname = localStorage.getItem("lastname");
+            var email = localStorage.getItem("email");
+    
+        // Writing the value in the document
+            document.write(""+fname);
+            document.write(""+lname);
+            document.write("<br>"+email);
+            document.write("<br>");
+
+
+            function tosubmit() {
+            // Getting the value of your text input
+            var ename = document.getElementById("eventname").value;
+            var date = document.getElementById("startdate").value;
+            var venue = document.getElementById("venue").value;
+            var address = document.getElementById("address").value;
+            var country= document.getElementById("country").value;
+
+            // Storing the value above into localStorage
+            localStorage.setItem("eventname", ename);
+            localStorage.setItem("startdate", date);
+            localStorage.setItem("venue", venue);
+            localStorage.setItem("address", address);
+            localStorage.setItem("country", country);
+
+            return ;
+        }
+                
+            
+            </script>
+
+
+</head>
+<body>
+     <form name="myform" onsubmit="tosubmit();" action="ticket.html">
+
+    <h1>Event details</h1>
+    <p> 
+        <label for="eventname">Event Name</label>
+        <input  id="eventname" type="text" name="data"><br>
+    </p>
+    <p> 
+        <label for="startdate">Start Date</label>
+        <input id="startdate" type="datetime-local" name="bdaytime">
+    </p>
+  
+      <h1>Location of the event</h1>
+    <p> 
+        <label for="Venue">Venue Name</label>
+        <input  id="venue" type="text" name="data"><br>
+    </p>
+    <p> 
+        <label for="address">Address</label>
+        <input  id="address" type="text" name="data"><br>
+    </p>
+    <p>
+        <label for="country">country</label>
+        <input id="country" type="text" name="myCountry" placeholder="Country">
+    </p>
+
+    <input type="submit" value="Submit">
+</form>
+</body>    
+
+
+
+
+</html>
